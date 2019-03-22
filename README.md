@@ -6,15 +6,12 @@
 
 ## Application Environment
 
-
 >Angular js v7.2.10
 >Spring boot v2.0.3
 >Postgresql v9.6.12
 
 
-
 ## Tools
-
 
 Download nodejs latest version :
 https://nodejs.org/en/
@@ -31,13 +28,12 @@ https://code.visualstudio.com/
 
 ## Installation
 
-
 ### Database
 
-- Database yang digunakan `simpegdb`
-- Nama table `akun` dan `pegawai`
-- Buka script pgsql pada folder `database/simpegdb/scriptdb` kemudian jalankan script atau buat manual
-  database dan table lalu import file .csv dari folder `database/simpegdb/akun.csv` dan `database/simpegdb/pegawai.csv`
+- Database yang digunakan `simpegdb` .
+- Nama table `akun` dan `pegawai` .
+- Buka script pgsql pada folder `database/simpegdb/scriptdb` kemudian jalankan script atau buat manual.
+  database dan table lalu import file .csv dari folder `database/simpegdb/akun.csv` dan `database/simpegdb/pegawai.csv` .
 - Struktur data :
 
 TABLE akun
@@ -123,7 +119,7 @@ TABLE pegawai
 
 `http://localhost:8888/api/pegawai/`
 
-- Open project WebserviceResrMujib di dalam folder backend, gunakan IDE spring tool suites
+- Open project WebserviceResrMujib di dalam folder backend, gunakan IDE spring tool suites.
 - Kemudian atur application.properties seperti dibawah ini (bisa disesuaikan dgn settingan masing-masing)
 
   spring.datasource.url=jdbc:postgresql://localhost/simpegdb
@@ -132,23 +128,17 @@ TABLE pegawai
   spring.jpa.generate-ddl=true
   server.port=8888
 
-- Port server yang digunakan `8888`
-- Untuk menjalankan aplikasi klik kanan pada project, click Run As kemudian pilih Spring Boot App
+- Port server yang digunakan `8888` .
+- Untuk menjalankan aplikasi klik kanan pada project, click Run As kemudian pilih Spring Boot App.
 
 
 ### Frontend
 
 `http://localhost:4200/`
 
-- Open project spa-simpeg-mujib di dalam folder frontend, gunakan IDE visual studio code bisa juga open project menggunakan terminal/command prompt 
-- Open terminal/command prompt kemudian ke project destination `cd spa-simpeg-mujib` lalu jalankan perintah `ng serve --open`
-- Jika menggunakan vs code, pilih terminal pada menu lalu click New Terminal, lalu jalankan perintah `ng serve --open`
-
-
-## Note
-
-- Jika ada masalah menjalankan project spa-simpeg-mujib karena npm version nya berbeda, hapus folder node_modules di dalam folder spa-simpeg-mujib
-- Kemudian jalankan perintah `npm install` 
+- Open project spa-simpeg-mujib di dalam folder frontend, gunakan IDE visual studio code bisa juga open project menggunakan terminal/cmd. 
+- Open terminal/cmd kemudian ke project destination `cd spa-simpeg-mujib`, jalankan perintah `npm install` untuk melakukan instalasi node_modules, kemudian jalankan perintah `ng serve --open` .
+- Jika menggunakan vs code, pilih terminal pada menu lalu click New Terminal, jalankan perintah `npm install` untuk melakukan instalasi node_modules, kemudian jalankan perintah `ng serve --open` .
 
 
 ### Documentation
