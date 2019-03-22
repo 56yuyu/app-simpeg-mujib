@@ -7,7 +7,9 @@
 ## Application Environment
 
 >Angular js v7.2.10
+
 >Spring boot v2.0.3
+
 >Postgresql v9.6.12
 
 
