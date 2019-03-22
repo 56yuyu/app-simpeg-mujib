@@ -1,0 +1,38 @@
+<nav>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/signup">Signup</a>
+</nav>
+<div class="bgPage">
+    
+<div style="width: 600px;">
+  <form (ngSubmit)="onSubmit()">
+    
+      <div class="form-group mb20">
+        <label for="nama" class="textStyle">Nama :</label>
+        <input type="text" class="form-control" id="nama" required [(ngModel)]="akun.nama" name="nama">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="username" class="textStyle">Username :</label>
+        <input type="text" class="form-control" id="username" required [(ngModel)]="akun.username" name="username">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="password" class="textStyle">Password :</label>
+        <input type="password" class="form-control" id="password" required [(ngModel)]="akun.password" name="password">
+      </div>
+
+      <div class="form-group mb20">
+                <label for="email" class="textStyle">Email :</label>
+                <input type="text" class="form-control" id="email" required [(ngModel)]="akun.email" name="email">
+                
+      </div>
+
+    <button type="submit" class="btn btn-success textStyle">Register</button>
+    <button type="submit" class="btn btn-success textStyle" (click)="goBack()">Cancel</button>
+  </form>
+</div>
+
+</div>

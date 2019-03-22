@@ -1,0 +1,42 @@
+<div *ngIf="pegawai">
+  
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="columndata">{{pegawai.nip}}</th>
+        <th class="columndata">{{pegawai.nama | uppercase}}</th>
+        <th class="columndata">
+            <div *ngIf='pegawai.jenisKelamin==1'>{{'Laki-laki'}}</div>
+            <div *ngIf='pegawai.jenisKelamin==0'>{{'Perempuan'}}</div>
+        </th>
+        <th class="columndata">{{pegawai.alamat}}</th>
+        <th class="columndata">{{pegawai.telpon}}</th>
+        <th class="columndata">{{pegawai.jabatan}}</th>
+        <th class="columndata">{{pegawai.divisi}}</th>
+        <th class="columndata">{{pegawai.usia + ' tahun'}}</th>
+        <th class="columndata">{{pegawai.lamaBekerja + ' tahun'}}</th>
+        <th class="columndata tcenter">
+          <div *ngIf='pegawai.status'>{{'Aktif'}}</div>
+          <div *ngIf='!pegawai.status'>{{'Tidak Aktif'}}</div>
+        </th>
+        <th>
+            
+            <a routerLink="/editpegawai/{{pegawai.idPegawai}}"><button class="update mr10" title="update" (click)='updatePegawai()'>Update</button></a>
+            <div class="mb10"></div>
+
+            <button class="delete" title="delete" (click)='deletePegawai()'>X Delete</button>
+            <div class="mb10"></div>
+
+            <button class="inactive" *ngIf='pegawai.status' (click)='updateActive(false)'>Inactive</button>
+            <button class="active" *ngIf='!pegawai.status' (click)='updateActive(true)'>Active</button>
+            <div class="mb10"></div>
+
+        </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+</div>

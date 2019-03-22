@@ -1,0 +1,36 @@
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/pegawai">Data Pegawai</a>
+    <a routerLink="/logout">Logout</a>
+</nav>
+<div class="bgPage">
+
+      <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="columndata">Nip</th>
+            <th class="columndata">Nama</th>
+            <th class="columndata">Jenkel</th>
+            <th class="columndata">Alamat</th>
+            <th class="columndata">Telpon</th>
+            <th class="columndata">Jabatan</th>
+            <th class="columndata">Divisi</th>
+            <th class="columndata">Usia</th>
+            <th class="columndata">Masa Kerja</th>
+            <th class="columndata tcenter">Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
+      <div *ngFor="let pegawai of datapegawai | async" style="width: 300px;">
+        <pegawai-adapter [pegawai]='pegawai'></pegawai-adapter>
+      </div>
+      
+      <div>
+        <a routerLink="/create_pegawai"><button type="button" class="button create mr20" >Create Pegawai</button></a>
+        <button type="button" class="button deleteall" (click)='deletePegawai()'>Delete All</button>
+      </div>
+
+</div>

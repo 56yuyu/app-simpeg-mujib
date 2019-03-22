@@ -1,0 +1,128 @@
+h3 {
+    font-size: 20px;
+    color: #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bgPage{
+    background-color: #fff;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.container {
+  width: 1250px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  display: table;
+  border-color: grey;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.table>thead:first-child>tr:first-child>th {
+  border-top: 0;
+}
+
+.table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tcenter{
+  text-align: center;
+}
+
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.columnno {
+  width: 100px;
+}
+
+.columndata {
+  width: 250px;
+}
+
+.mr20{
+  margin-right: 20px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.create {
+  background-color: rgb(4, 109, 44) !important;
+  color: white;
+}
+
+button.deleteall {
+  background-color: rgb(236, 31, 31) !important;
+  color: white;
+}
+
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}

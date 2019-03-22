@@ -1,0 +1,83 @@
+<div class="bgPage">
+    <div class="forminput">
+
+<h3 class="textHeaderStyle">Create Pegawai</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group mb20">
+        <label for="nip" class="textStyle">Nip :</label>
+        <div class="textSample">(contoh: 201901ABC)</div> 
+        <input type="text" class="form-control" id="nip" required [(ngModel)]="pegawai.nip" name="nip">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="nama" class="textStyle">Nama :</label>
+        <input type="text" class="form-control" id="nama" required [(ngModel)]="pegawai.nama" name="nama">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="jenisKelamin" class="textStyle">Jenis Kelamin :</label>
+        <br/><br/>
+        <label class="form-check-inline textStyle">
+            <input class="form-check-input" type="radio" name="jenisKelamin" [value]="1" [(ngModel)]="pegawai.jenisKelamin"> Laki-laki
+        </label>
+        <label class="form-check-inline textStyle">
+            <input class="form-check-input" type="radio" name="jenisKelamin" [value]="0" [(ngModel)]="pegawai.jenisKelamin"> Perempuan
+        </label>
+        <br/><br/>
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="alamat" class="textStyle">Alamat :</label>
+        <textarea class="form-control-textarea" id="alamat" required [(ngModel)]="pegawai.alamat" name="alamat" rows="6"></textarea>
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="telpon" class="textStyle">Telpon :</label>
+        <input type="text" class="form-control" id="telpon" required [(ngModel)]="pegawai.telpon" name="telpon">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="jabatan" class="textStyle">Jabatan :</label>
+        <div class="textSample">(contoh: A / B / C / D)</div> 
+        <input type="text" class="form-control" id="jabatan" required [(ngModel)]="pegawai.jabatan" name="jabatan">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="divisi" class="textStyle">Divisi :</label>
+        <div class="textSample">(contoh: IT / HRD / Marketing / Finance)</div> 
+        <input type="text" class="form-control" id="divisi" required [(ngModel)]="pegawai.divisi" name="divisi">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="usia" class="textStyle">Usia :</label>
+        <div class="textSample">(contoh: 25)</div> 
+        <input type="text" class="form-control" id="usia" required [(ngModel)]="pegawai.usia" name="usia">
+        
+      </div>
+  
+      <div class="form-group mb20">
+        <label for="lamaBekerja" class="textStyle">Masa Kerja (tahun):</label>
+        <div class="textSample">(contoh: 8)</div> 
+        <input type="text" class="form-control" id="lamaBekerja" required [(ngModel)]="pegawai.lamaBekerja" name="lamaBekerja">
+        
+      </div>
+
+    <button type="submit" class="btn btn-success textStyle">Submit</button>
+    <button type="submit" class="btn btn-success textStyle" (click)="goBack()">Go Back</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4 class="textStyle">You submitted successfully!</h4>
+  <a routerLink="/pegawai"><button class="btn btn-default textStyle">Back to Pegawai</button></a>
+</div>
+
+</div>
+</div>
